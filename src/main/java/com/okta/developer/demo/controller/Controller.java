@@ -5,7 +5,7 @@ import com.okta.developer.demo.entity.LoginForm;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-class CoolCarController {
+class Controller {
 
     @GetMapping("/users")
     public String getUser(){
@@ -15,9 +15,9 @@ class CoolCarController {
     }
 
     @PostMapping("/request")
-    public String postCon(
+    public boolean postCon(
             @RequestBody LoginForm loginForm) {
-        return loginForm.sout() ;
+        return true;
     }
 
 
